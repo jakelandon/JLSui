@@ -1,0 +1,188 @@
+
+@black: #000;
+@gray: #666;
+@darkGray: #333;
+@red: #f00;
+@green: #209600;
+@white: #fff;
+
+@btn-text-color: @white;
+@btn-bg-color: @gray;
+
+/* INPUT FIELD 
+
+*/
+.JLSui-input-field {
+	color:@gray;
+}
+
+.default {
+	color:@gray;
+}	
+.populated {
+	color:@black;
+}
+
+.valid {
+	&:focus {
+		outline-color:@green;
+	}
+}
+.invalid {
+	&:focus {
+		outline-color:@red;
+	}
+}
+
+/*
+ BTN 
+*/
+.JLSui-btn {
+
+	.enabled;
+	
+	.label {
+		width:100%;
+	}
+	
+	.icon {
+		width:100%;
+		height:auto;
+	}
+}
+
+
+
+.enabled { 
+	cursor:pointer;
+	/*color:@btn-text-color;
+	background:@btn-bg-color;*/
+}
+.disabled {
+	cursor:default;
+	color:darken(@btn-text-color, 20%);
+	background:darken(@btn-bg-color, 20%);
+}
+.over {
+	
+}
+.off {
+
+}
+.on {
+
+}
+
+.visible {
+	display:'block';
+}
+.hidden { 
+	display:'none';
+}
+
+
+/* ALERT BAR 
+*/
+
+.JLSui-alert-bar {
+	width:100%;
+	background:@darkGray;
+	display:none;
+	padding:10px 0px;
+	text-align:center;
+	color:@white;
+	margin:0;
+	float:left;
+	
+	.header {
+		width:80%;
+		font-weight:bold;
+		margin:0 auto;
+	}
+	.subheader {
+		width:80%;
+		color:darken(@white, 20%);
+		margin:0 auto 5px auto;
+	}
+	.action-area {
+		margin:0 auto;
+	}
+	
+	@media (max-width:480px) {
+		.header {
+			width:90%;
+		}
+		.subheader {
+			width:90%;
+		}
+	}
+}
+
+/* ALERT BOX 
+*/
+
+.JLSui-alert-box {
+	width:100%;
+	height:100%;
+	position:fixed;
+	background:rgba(0,0,0,.7);
+	display:none;
+	text-align:center;
+	color:@white;
+	margin:0;
+	float:left;
+	z-index:10000;
+	opacity:0;
+	
+	.content-holder {
+		padding:10px 0px;
+		background:@darkGray;
+		width:300px;
+		position:fixed;
+		
+		.header {
+			width:80%;
+			font-weight:bold;
+			margin:0 auto;
+		}
+		.subheader {
+			width:80%;
+			color:darken(@white, 20%);
+			margin:0 auto 5px auto;
+		}
+		.action-area {
+			margin:0 auto;
+			.btn {
+				margin:0 .5%;
+			}
+		}
+		
+		@media (max-width:480px) {
+			.header {
+				width:90%;
+			}
+			.subheader {
+				width:90%;
+			}
+		}
+		
+		.loader-area {
+			float:left;
+			width:100%;
+			text-align:center;
+			height:40px;
+			display:none;
+			
+			.spinner {
+				margin:0 auto;
+				top:20px;
+			}
+			
+			.loader {
+				float:left;
+				color:#fff;
+				display:none;
+			}
+		}
+	}
+}
